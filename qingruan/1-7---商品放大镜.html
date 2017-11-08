@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<style>
+			#out{
+				height: 450px;
+				overflow: hidden;
+				/*清除浮动,子集全浮动*/
+				padding:50px 0px 0px 50px;
+				position: relative;
+			}
+			#minbox{
+				width:350px;
+				height: 350px;
+				border:1px solid gray;
+				float:left;
+				cursor: move;
+				position: relative;
+			}
+			#mask{
+				width:175px;
+				height: 175px;
+				background: yellow;
+				opacity: 0.4;
+				filter: alpha(opacity = 40);
+				display: none;
+				position: absolute;
+				left:0px;
+				top:0px;
+			}
+			#maxbox{
+				display: none;
+				width:400px;
+				height: 400px;
+				border:1px solid gray;
+				position: absolute;
+				left:412px;
+				top:50px;
+				overflow: hidden;
+			}
+			#maxImg{
+				width:800px;
+				height:800px;
+				position: absolute;
+			}
+			#msg{
+				width:600px;
+				height: 400px;
+				float: left;
+				margin-left:30px;
+			}
+		</style>
+		<script src='js/myPackage.js'></script>
+	</head>
+	<body>
+		<div id='out'>
+			<div id='minbox'>
+				<img src="img/min.jpg" alt="" id='minImg'/>
+				<p id='mask'></p>
+			</div>
+			<div id='maxbox'>
+				<img src="img/max.jpg" alt="" id='maxImg' />
+			</div>
+			<div id='msg'>
+				<img src="img/msg.jpg" alt="" />
+			</div>
+		</div>
+		<script>
+			var minbox = document.getElementById('minbox');
+			var minImg = document.getElementById('minImg');
+			var mask = document.getElementById('mask');
+			var maxbox = document.getElementById('maxbox');
+			var maxImg = document.getElementById('maxImg');
+			
+			minbox.onmousemove = function(event){
+				var event = event||window.event;
+				mask.style.display = 'block';
+				maxbox.style.display = 'block';
+				
+				//---mask的位置
+				//---x位置 = 鼠标在页面的位置-小盒子相对页面的位置-mask宽度一半
+				var maskL = event.clientX-offsetLT(minbox).left-mask.offsetWidth/2;
+				var maskT = event.clientY-offsetLT(minbox).top-mask.offsetHeight/2;
+				
+				//---判断mask的活动区域
+				var maxmoveX = minbox.clientWidth - mask.clientWidth;
+				var maxmoveY = minbox.clientHeight - mask.clientHeight;
+				
+				//---判断mask移动的临界值
+				//---水平方向
+				if(maskL>=maxmoveX){
+					maskL = maxmoveX;
+				}else if(maskL<0){
+					maskL = 0;
+				}
+				//---垂直方向
+				if(maskT>=maxmoveY){
+					maskT = maxmoveY;
+				}else if(maskT<0){
+					maskT = 0;
+				}
+				//---赋值
+				mask.style.left = maskL + 'px';
+				mask.style.top = maskT + 'px';
+				
+				//---移动比例
+				var scale = maxImg.offsetWidth/minImg.offsetWidth;
+				//---2.2857142857142856
+				//---定义大图的移动位置
+				maxImg.style.left = -maskL*scale + 'px';
+				maxImg.style.top = -maskT*scale + 'px';
+				
+				//---鼠标离开，全部隐藏
+				minbox.onmouseout = function(){
+					mask.style.display = 'none';
+					maxbox.style.display = 'none';
+				}	
+			}
+		</script>
+	</body>
+</html>

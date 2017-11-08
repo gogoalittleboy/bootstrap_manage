@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>点名器</title>
+		<style type="text/css">
+			body{
+				text-align: center;
+				background-image: url(img/bg.jpg);
+				background-size:cover;
+			}
+			#btn{
+				margin:100px auto;
+				cursor: pointer;
+				font-size:30px;
+				border-radius: 10px;
+				width:200px;
+				height:50px;
+				background: lightsalmon;
+				border:none;
+			}
+			#msg{
+				font-weight: bold;
+				font-family: '楷体';
+				font-size:150px;
+				text-align: center;
+				line-height: 200px;
+				width:600px;
+				height:200px;
+				margin:0px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<button id='btn'>开始</button>
+		<div id='msg'>
+			
+		</div>
+		<script type="text/javascript">
+		    var	msg = document.getElementById('msg')
+			var btn = document.getElementById('btn');
+			var arr=[
+				"杨彩晗",
+				"陈渊博",
+				"孙袁文",
+				"魏新波",
+				"葛翰林",
+				"倪一",
+				"龚琦",
+				"吴友文",
+				"钱唐",	
+				"杨  艳",	
+				"黄继安",	
+				"龚洁",
+				"韩文",	
+				"范成磊",	
+				"卢丹",	
+				"黄达",
+				"陈昊",	
+				"倪君",	
+				"潘倩倩",	
+				"丁悦",
+				"袁奔",	
+				"王冬",	
+				"袁科薇",	
+				"曹栋",
+				"宋洁钰",	
+				"党方超",
+				"陈璐",	
+				"洪政"
+			];
+			var timer = null;
+			var flag = 0;//---停止
+			btn.onclick = function (){
+				if(flag==0){
+					btn.innerHTML = '停止';
+					moveRandom();
+					flag = 1;
+				}else{
+					btn.innerHTML = '开始';
+					stopRandom();
+					flag = 0;
+				}
+			}
+			
+			function moveRandom(){
+				timer = setInterval(function(){
+					msg.innerHTML = arr[Math.floor(Math.random()*arr.length)];
+				},100)
+			}
+			
+			function stopRandom(){
+				clearInterval(timer);
+			}
+			//---键盘事件
+		/*	document.onkeydown  = function (ev){
+				var e = ev||window.event;
+//				alert(e.keyCode);
+				if(e.keyCode==32){
+					if(flag==0){
+						btn.innerHTML = '停止';
+						moveRandom();
+						flag = 1;
+					}else{
+						btn.innerHTML = '开始';
+						stopRandom();
+						flag = 0;
+					}	
+				}	
+			}*/
+		</script>
+	</body>
+</html>

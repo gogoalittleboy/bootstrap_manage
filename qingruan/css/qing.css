@@ -1,0 +1,67 @@
+.navbar-header .logo{
+	color: #45d3c2;
+}
+
+.hei{
+	/*width: 100%;
+	margin-top: 50px;*/
+	background: #2e3543;
+}
+
+.hei h2,.hei p{
+	color: #fff;
+}
+
+.hui{
+	background: #d3d3d3;
+}
+
+.jianju{
+	padding: 80px;
+}
+.bc{
+	width: 100%;
+	/*height: 100%;*/
+	background: url(../img/contact-bg.png) no-repeat;
+	background-size: cover;
+}
+
+.cl{
+	color: #fff;
+}
+
+.bc1{
+	background:rgba(0,0,0,0.7);
+}
+
+
+.bt1{
+	margin: 20px 0;
+	color: #40d2b1;
+	border: 1px solid #40d2b1;
+	background: #fff;
+	
+}
+
+.bc2{
+	background: #FFFFFF;
+	text-align: center;	
+}
+
+.tutop{
+	margin-top: 20px;
+}
+
+.hang{
+	line-height: 50px;
+	color: #fff;
+}
+
+h2{
+	font-weight: bold;
+}
+p{
+	font-size: large;
+	font-family: "微软雅黑";
+	
+}

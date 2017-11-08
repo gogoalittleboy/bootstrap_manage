@@ -1,0 +1,426 @@
+<<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css ">
+			
+		<style type="text/css">
+			.aaa {
+				margin-top: 60px;
+			}
+			.col-sm-2 ul li a {
+				color: #000;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="nav">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-10">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a href="#" class="navbar-brand">
+							后台管理
+						</a>
+						<button class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+					</button>
+					</div>
+
+					<div class="collapse navbar-collapse " id="navbar">
+
+						<ul class="nav navbar-nav navbar-left">
+							<li>
+								<a href="shouye.html"><span class="glyphicon glyphicon-home">&nbsp;后台管理</span></a>
+							</li>
+							<li>
+								<a href="usermanager.html"><span class="glyphicon glyphicon-user">&nbsp;用户管理</span></a>
+							</li>
+							<li class="active">
+								<a href="content.html"><span class="glyphicon glyphicon-list-alt">&nbsp;内容管理</span></a>
+							</li>
+							<li>
+								<a href="biaoqian.html"><span class="glyphicon glyphicon-tag">&nbsp;标签管理</span></a>
+							</li>
+						</ul>
+
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<!--<div class='dropdown'>-->
+								<a href="" data-toggle='dropdown'>admin<span class="caret"></span></a>
+								<ul class='dropdown-menu'>
+									<li>
+										<a href="#"><span class="glyphicon glyphicon-asterisk"></span>&nbsp;前台首页</a>
+									</li>
+									<li>
+										<a href=""><span class="glyphicon glyphicon-user"></span>&nbsp;个人主页</a>
+									</li>
+									<li>
+										<a href=""><span class="glyphicon glyphicon-cog"></span>&nbsp;个人设置</a>
+									</li>
+									<li>
+										<a href=""><span class="glyphicon glyphicon-credit-card"></span>&nbsp;账户中心</a>
+									</li>
+									<li>
+										<a href=""><span class="glyphicon glyphicon-heart"></span>&nbsp;我的收藏</a>
+									</li>
+								</ul>
+								<!--</div>-->
+							</li>
+							<li>
+								<a href=""><span class="glyphicon glyphicon-off">&nbsp;退出</span></a>
+							</li>
+						</ul>
+
+					</div>
+
+				</div>
+			</div>
+			<div class="col-sm-1"></div>
+		</nav>
+		
+		<div class="container aaa">
+			<div class="col-sm-2">
+
+				<ul class='list-group'>
+					<li class="list-group-item">
+						<a href="#nrgl" data-toggle='tab'>内容管理</a>
+					</li>
+					<li class='list-group-item'>
+						<a href="#tjnr" data-toggle='tab'>添加内容</a>
+					</li>
+					
+				</ul>
+
+			</div>
+			
+			<div class="col-sm-10">
+				<h4 class='page-header' style="margin-top: 0;">内容管理</h4>
+				<ul class='nav nav-tabs'>
+					<li class="active">
+						<a href="#nrgl" data-toggle='tab'>内容管理</a>
+					</li>
+					<li>
+						<a href="#tjnr" data-toggle='tab'>添加内容</a>
+					</li>
+					
+
+				</ul>
+				<div class="tab-content">
+					
+					<div class="tab-pane active" id='nrgl'>
+						<table class='table'>
+							<thead>
+								<tr>
+									<th>
+										文章标题
+									</th>
+									<th>
+										作者
+									</th>
+									<th>
+										发布时间
+									</th>
+									<th>
+										操作
+									</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td>泛Mooc职业教育，效果和就业为王</td>
+									<td>郭敬明</td>
+									<td>2015/08/08</td>
+									<td>
+										<div class='dropdown'>
+											<button class="btn btn-default" data-toggle='dropdown'>
+													操作
+													<span class="caret"></span>
+												</button>
+											<ul class='dropdown-menu'>
+												<li>
+													<a href="#">编辑</a>
+												</li>
+												<li>
+													<a href="">删除</a>
+												</li>
+												<li>
+													<a href="">全局置顶</a>
+												</li>
+												
+											</ul>
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<td>泛Mooc职业教育，效果和就业为王</td>
+									<td>郭敬明</td>
+									<td>2015/08/08</td>
+									<td>
+										<div class='dropdown'>
+											<button class="btn btn-default" data-toggle='dropdown'>
+													操作
+													<span class="caret"></span>
+												</button>
+											<ul class='dropdown-menu'>
+												<li>
+													<a href="#">编辑</a>
+												</li>
+												<li>
+													<a href="">删除</a>
+												</li>
+												<li>
+													<a href="">全局置顶</a>
+												</li>
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<td>泛Mooc职业教育，效果和就业为王</td>
+									<td>郭敬明</td>
+									<td>2015/08/08</td>
+									<td>
+										<div class='dropdown'>
+											<button class="btn btn-default" data-toggle='dropdown'>
+													操作
+													<span class="caret"></span>
+												</button>
+											<ul class='dropdown-menu'>
+												<li>
+													<a href="#">编辑</a>
+												</li>
+												<li>
+													<a href="">删除</a>
+												</li>
+												<li>
+													<a href="">全局置顶</a>
+												</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<td>泛Mooc职业教育，效果和就业为王</td>
+									<td>郭敬明</td>
+									<td>2015/08/08</td>
+									<td>
+										<div class='dropdown'>
+											<button class="btn btn-default" data-toggle='dropdown'>
+													操作
+													<span class="caret"></span>
+												</button>
+											<ul class='dropdown-menu'>
+												<li>
+													<a href="#">编辑</a>
+												</li>
+												<li>
+													<a href="">删除</a>
+												</li>
+												<li>
+													<a href="">全局置顶</a>
+												</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<td>泛Mooc职业教育，效果和就业为王</td>
+									<td>郭敬明</td>
+									<td>2015/08/08</td>
+									<td>
+										<div class='dropdown'>
+											<button class="btn btn-default" data-toggle='dropdown'>
+													操作
+													<span class="caret"></span>
+												</button>
+											<ul class='dropdown-menu'>
+												<li>
+													<a href="#">编辑</a>
+												</li>
+												<li>
+													<a href="">删除</a>
+												</li>
+												<li>
+													<a href="">全局置顶</a>
+												</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<td>泛Mooc职业教育，效果和就业为王</td>
+									<td>郭敬明</td>
+									<td>2015/08/08</td>
+									<td>
+										<div class='dropdown'>
+											<button class="btn btn-default" data-toggle='dropdown'>
+													操作
+													<span class="caret"></span>
+												</button>
+											<ul class='dropdown-menu'>
+												<li>
+													<a href="#">编辑</a>
+												</li>
+												<li>
+													<a href="">删除</a>
+												</li>
+												<li>
+													<a href="">全局置顶</a>
+												</li>
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<td>泛Mooc职业教育，效果和就业为王</td>
+									<td>郭敬明</td>
+									<td>2015/08/08</td>
+									<td>
+										<div class='dropdown'>
+											<button class="btn btn-default" data-toggle='dropdown'>
+													操作
+													<span class="caret"></span>
+												</button>
+											<ul class='dropdown-menu'>
+												<li>
+													<a href="#">编辑</a>
+												</li>
+												<li>
+													<a href="">删除</a>
+												</li>
+												<li>
+													<a href="">全局置顶</a>
+												</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<td>泛Mooc职业教育，效果和就业为王</td>
+									<td>郭敬明</td>
+									<td>2015/08/08</td>
+									<td>
+										<div class='dropdown'>
+											<button class="btn btn-default" data-toggle='dropdown'>
+													操作
+													<span class="caret"></span>
+												</button>
+											<ul class='dropdown-menu'>
+												<li>
+													<a href="#">编辑</a>
+												</li>
+												<li>
+													<a href="">删除</a>
+												</li>
+												<li>
+													<a href="">全局置顶</a>
+												</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<td>泛Mooc职业教育，效果和就业为王</td>
+									<td>郭敬明</td>
+									<td>2015/08/08</td>
+									<td>
+										<div class='dropdown'>
+											<button class="btn btn-default" data-toggle='dropdown'>
+													操作
+													<span class="caret"></span>
+												</button>
+											<ul class='dropdown-menu'>
+												<li>
+													<a href="#">编辑</a>
+												</li>
+												<li>
+													<a href="">删除</a>
+												</li>
+												<li>
+													<a href="">全局置顶</a>
+												</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+										
+					</div>
+
+					<div class="tab-pane" id="tjnr">
+						<form action="" class="form-horizontal">
+							<div class="form-group">
+								<label for="" class="control-label">标题</label>
+								<input type="text" placeholder="请输入文章标题" class="form-control"/>
+							</div>
+							<div class="form-group">
+								<label for="" class="control-label">文章内容</label>
+								<textarea name="" rows="13" class="form-control" placeholder="请输入文章正文部分"></textarea>
+							</div>
+						</form>
+					</div>
+						
+				
+
+				</div>
+
+			
+				<div class="col-sm-8"></div>
+				<div class="col-sm-4">
+				<ul class='pagination' id='page'>
+
+					<li>
+						<a href="">&laquo;</a>
+					</li>
+					<li class="active">
+						<a href="">1</a>
+					</li>
+					<li>
+						<a href="">2</a>
+					</li>
+					<li>
+						<a href="">3</a>
+					</li>
+					<li>
+						<a href="">4</a>
+					</li>
+					<li>
+						<a href="">5</a>
+					</li>
+					<li>
+						<a href="">6</a>
+					</li>
+					<li>
+						<a href="">&raquo;</a>
+					</li>
+				</ul>
+			</div>
+				
+			</div>
+			
+		</div>
+		
+		
+		<div class="footer">
+			<p class="text-center hei hang">Copyright @2012-2015&nbsp;&nbsp;ICP备xxxxxx号-</p>
+		</div>
+		
+		<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js "></script>
+		<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js "></script>
+	</body>
+</html>

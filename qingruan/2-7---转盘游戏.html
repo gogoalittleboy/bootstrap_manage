@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		 	body{
+		 		background: #FFC40A;
+		 	}
+			 #bg{
+				 width: 650px;
+				 height: 600px;
+				 margin: 0 auto;
+				 background: url(img/turntable-bg.jpg) no-repeat;
+				 position: relative;
+				 }
+			#pointer{
+				cursor: pointer;
+				 position: absolute;
+				 z-index: 10;
+				 top: 155px;
+				 left: 247px;
+				 }
+			#turntable{
+				 position: absolute;
+				 z-index: 5;
+				 top: 60px;
+				 left: 116px;
+				 transition: all 4s;
+				}
+		  
+		 </style>
+	</head>
+	<body>
+		 <div id="bg">
+			 <img src="img/pointer.png"  id='pointer'>
+			 <img src="img/turntable.png"  id='turntable'>
+		 </div>
+		 <script type="text/javascript">
+		 	var pointer = document.getElementById('pointer');
+		 	var turntable = document.getElementById('turntable');
+		 	
+		 	var cat = 51.4;//---每个区域的宽度
+		 	var num = 0;//---每个区域的编号
+		 	var flag = 0;//---表示停止状态
+		 	
+		 	pointer.onclick = function(){
+		 		if(flag==0){
+		 			turntable.style.transform = 'rotate(0deg)';//---初始化旋转角度
+		 			rotate();
+		 			flag = 1;
+		 		}
+		 	}
+		 	//---旋转函数
+		 	function rotate(){
+		 		var timer = null;
+		 		var timer1 = null
+		 		var radDeg = 0;//---随机生成一个角度
+		 		clearInterval(timer);
+		 		clearTimeout(timer1);
+		 		timer = setInterval(function(){
+		 			if(Math.floor(radDeg/360)<4){
+		 				radDeg = Math.floor(Math.random()*3600);//---角度的取值为0-3600
+		 			}else{
+		 				clearInterval(timer);
+		 				turntable.style.transform = 'rotate(' +  radDeg  + 'deg)';
+			 			timer1=setTimeout(function(){
+			 					num = radDeg % 360;
+			 					if(num<=cat*1){
+			 						alert('免单4999元');
+			 					}else if(num<=cat*2){
+			 						alert('免单50元');
+			 					}else if(num<=cat*3){
+			 						alert('免单10元');
+			 					}else if(num<=cat*4){
+			 						alert('免单5元');
+			 					}else if(num<=cat*5){
+			 						alert('免分期');
+			 					}else if(num<=cat*6){
+			 						alert('提高白条额度');
+			 					}else if(num<=cat*7){
+			 						alert('未中奖');
+			 					}
+		 				},4000)
+		 			}
+		 		},30);
+		 	}
+		 </script>
+	</body>
+</html>

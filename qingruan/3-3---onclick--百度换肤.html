@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			body{
+				background: url(img/3-4-1.jpg) no-repeat;
+			}
+			#box{
+				padding:20px;
+				height: 140px;
+				text-align: center;
+				background: rgba(255,255,255,0.4);
+			}
+			img{
+				width:220px;
+				margin:0px auto;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<img src="img/3-4-1.jpg" alt="" />  
+			<img src="img/3-4-2.jpg" alt="" />
+			<img src="img/3-4-3.jpg" alt="" />
+			<img src="img/3-4-4.jpg" alt="" />
+			<img src="img/3-4-5.jpg" alt="" />
+		</div>
+		<script type="text/javascript">
+			var imgs = document.getElementsByTagName('img');//---数组
+			for(var i = 0;i<imgs.length;i++){
+				//---给每个图片自定义一个属性 index  <-- i
+				imgs[i].index = i;
+				imgs[i].onclick = function(){
+					document.body.style.backgroundImage = "url(img/3-4-" + (this.index + 1) + ".jpg)";
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,91 @@
+#outer{
+	width:100%;
+	height:500px;
+	/*background-image: url(../img/mibg.jpg);*/
+	/*background-size:cover;*/
+}
+.box{
+	padding-top:50px;
+	padding-bottom:50px;
+	width:100%;
+	height:400px;
+}
+/*内部子集以silde定位*/
+.slide{
+	box-shadow: 5px 5px 10px black;
+	width:1000px;
+	height:400px;
+	margin:15px auto;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+/*ul保证足够的宽*/
+.slide ul{
+	width:1000%;
+	position:absolute;
+	top:0px;
+	left: 0px;
+}
+/*设置图片*/
+.slide ul li{
+	width:1000px;
+	height: 400px;
+	float: left;
+}
+.slide ul li img{
+	width:1000px;
+	height: 400px;
+}
+/*数字下标*/
+.box ol{
+	position: absolute;
+	bottom: 10px;
+	right:20px;
+	line-height: 20px;
+	text-align: center;	
+}
+.box ol li{
+	width:20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #fff;
+	border:1px solid #ccc;
+	float:left;
+	margin-left:10px;
+}
+.box ol li.current{
+	background: darkorange;
+}
+/*左右切换按钮*/
+.arr{
+	display: none;
+}
+.arr span{
+	border:1px solid red;
+	position:absolute;
+	left:5px;
+	top:50%;
+	width:50px;
+	height:60px;
+	margin-top:-20px;
+	background: #000;
+	text-align: center;
+	line-height: 60px;
+	font-size:30px;
+	font-weight: bold;
+	font-family:'黑体';
+	color:#fff;
+	border:1px solid #fff;
+	opacity: 0.3;
+	filter:alpha(opacity=30);
+	cursor: pointer;	
+}
+.arr #right{
+	right:5px;
+	left:auto;
+}
+.arr span:hover{
+	opacity:0.3;
+	filter:alpha(opacity=30);
+}
